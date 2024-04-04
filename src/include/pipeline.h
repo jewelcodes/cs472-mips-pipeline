@@ -100,4 +100,6 @@ private:
 public:
     Pipeline(Memory *, uint32_t *, size_t);
     int emulate();
+    void dumpState();
+    void copyWriteToRead();
 };

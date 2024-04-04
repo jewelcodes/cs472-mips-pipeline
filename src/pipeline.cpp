@@ -7,6 +7,8 @@
 #include <pipeline.h>
 #include <memory.h>
 #include <cstring>      // memset, memmove for pipeline register files
+#include <iostream>
+#include <iomanip>
 
 /* CONSTRUCTOR */
 Pipeline::Pipeline(Memory *m, uint32_t *binary, size_t size) {
@@ -25,7 +27,7 @@ Pipeline::Pipeline(Memory *m, uint32_t *binary, size_t size) {
 
     // the assignment doesn't explicitly state what PC to start with so i'm
     // choosing an arbitrary value here just to have something to dump
-    this->pc = 0x800000;
+    this->pc = 0x80000;
 }
 
 /*
@@ -36,14 +38,48 @@ Pipeline::Pipeline(Memory *m, uint32_t *binary, size_t size) {
 
 int Pipeline::emulate() {
     // each loop here corresponds to one CPU cycle
-    for(size_t i = 0; i < this->size; i++) {
+    // TEMPORARILY ONLY DO ONE CYCLE UNTIL I GET IT WORKING
+    for(this->index = 0; this->index < 1; this->index++) {
         this->fetch();          // go through all 5 stages of the pipeline
         /*this->decode();       // TODO!!
         this->execute();
         this->memory();
         this->writeback();*/
 
-        /*this->dumpState();
-        this->copyWriteToRead();*/
+        this->dumpState();
+        //this->copyWriteToRead();
     }
+}
+
+/*
+ * dumpState(): dumps all the pipeline registers
+ * Parameters: none
+ * Returns: nothing
+ */
+
+void Pipeline::dumpState() {
+    cout << "Clock cycle " << dec << this->index << ":" << endl;
+    cout << "IF/ID register (written by IF): " << endl;
+    this->ifIdWrite.dump();
+    cout << endl << "IF/ID register (read by ID): " << endl;
+    this->ifIdRead.dump();
+    cout << endl;
+
+    cout << "ID/EX register (written by ID): " << endl;
+    this->idExWrite.dump();
+    cout << endl << "ID/EX register (read by EX): " << endl;
+    this->idExRead.dump();
+    cout << endl;
+
+    cout << "EX/MEM register (written by EX): " << endl;
+    this->exMemWrite.dump();
+    cout << endl << "EX/MEM register (read by MEM): " << endl;
+    this->exMemRead.dump();
+    cout << endl;
+
+    cout << "MEM/WB register (written by MEM): " << endl;
+    this->memWbWrite.dump();
+    cout << endl << "MEM/WB register (read by MEM): " << endl;
+    this->memWbRead.dump();
+    cout << endl;
 }
