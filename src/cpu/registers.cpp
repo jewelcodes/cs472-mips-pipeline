@@ -66,9 +66,9 @@ void MemWbRegister::clear() {
 
 void IfIdRegister::dump() {
     cout << "pc = 0x";
-    cout << hex << setw(5) << setfill('0') << uppercase << this->newPc << endl;
+    cout << hex << setw(5) << setfill('0') << uppercase << this->newPc;
     cout << "  instr = 0x";
-    cout << hex << setw(8) << setfill('0') << uppercase << this->instruction;
+    cout << hex << setw(8) << setfill('0') << uppercase << this->instruction << endl;
 }
 
 void IdExRegister::dump() {
