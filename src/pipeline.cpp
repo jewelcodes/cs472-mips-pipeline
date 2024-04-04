@@ -47,7 +47,7 @@ int Pipeline::emulate() {
         this->fetch();          // go through all 5 stages of the pipeline
         /*this->decode();       // TODO!!
         this->execute();
-        this->memio();
+        this->memory();
         this->writeback();*/
 
         this->dumpState();

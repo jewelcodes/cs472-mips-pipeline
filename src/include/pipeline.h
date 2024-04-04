@@ -49,7 +49,7 @@ private:
     int fetch();
     int decode();
     int execute();
-    int memio();
+    int memory();
     int writeback();
 
 public:
