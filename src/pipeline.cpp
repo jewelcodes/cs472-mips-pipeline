@@ -38,14 +38,16 @@ int Pipeline::emulate() {
     // TEMPORARILY ONLY DO ONE CYCLE UNTIL I GET IT WORKING
     for(this->index = 0; this->index < 2; this->index++) {
         this->fetch();          // go through all 5 stages of the pipeline
-        /*this->decode();       // TODO!!
-        this->execute();
-        this->memory();
-        this->writeback();*/
+        this->decode();
+        //this->execute();
+        //this->memory();
+        //this->writeback();
 
         this->dumpState();
         this->copyWriteToRead();
     }
+
+    return 0;
 }
 
 /*

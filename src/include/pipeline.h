@@ -10,6 +10,17 @@
 #include <cstddef>      // size_t
 #include <memory.h>
 
+// Constants for readibility
+#define ALU_OP_ADD      0b00        // used in sw, lw
+#define ALU_OP_SUB      0b01        // used for branching
+#define ALU_OP_FUNC     0b10        // function code - R-type instructions
+
+#define OPCODE_SB       0x28
+#define OPCODE_LB       0x20
+
+#define FUNCTION_ADD    0x20
+#define FUNCTION_SUB    0x22
+
 using namespace std;
 
 /* CPU Register File */
