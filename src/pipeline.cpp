@@ -22,12 +22,9 @@ Pipeline::Pipeline(Memory *m, uint32_t *binary, size_t size) {
         this->registers.r[i] = 0x100 + i;
     }
 
-    // reset all the control signals to start with all nops
-
-
     // the assignment doesn't explicitly state what PC to start with so i'm
-    // choosing an arbitrary value here just to have something to dump
-    this->pc = 0x80000;
+    // choosing a nice value to dump
+    this->pc = 0x00000;
 }
 
 /*
