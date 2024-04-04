@@ -21,12 +21,16 @@ Pipeline::Pipeline(Memory *memory, uint32_t *binary, size_t size) {
     }
 
     // reset all the control signals to start with all nops
-    memset(&this->ifId, 0, sizeof(PipelineRegisters_t));
-    memset(&this->idEx, 0, sizeof(PipelineRegisters_t));
-    memset(&this->exMem, 0, sizeof(PipelineRegisters_t));
-    memset(&this->memWb, 0, sizeof(PipelineRegisters_t));
+    memset(&this->ifIdRead, 0, sizeof(PipelineRegisters_t));
+    memset(&this->idExRead, 0, sizeof(PipelineRegisters_t));
+    memset(&this->exMemRead, 0, sizeof(PipelineRegisters_t));
+    memset(&this->memWbRead, 0, sizeof(PipelineRegisters_t));
+    memset(&this->ifIdWrite, 0, sizeof(PipelineRegisters_t));
+    memset(&this->idExWrite, 0, sizeof(PipelineRegisters_t));
+    memset(&this->exMemWrite, 0, sizeof(PipelineRegisters_t));
+    memset(&this->memWbWrite, 0, sizeof(PipelineRegisters_t));
 
-    // the instructions don't explicitly state what PC to start with so i'm
+    // the assignment doesn't explicitly state what PC to start with so i'm
     // choosing an arbitrary value here just to have something to dump
     this->pc = 0x800000;
 }
@@ -38,5 +42,15 @@ Pipeline::Pipeline(Memory *memory, uint32_t *binary, size_t size) {
  */
 
 int Pipeline::emulate() {
-    return -1;  // stub
+    // each loop here corresponds to one CPU cycle
+    for(size_t i = 0; i < this->size; i++) {
+        this->fetch();          // go through all 5 stages of the pipeline
+        /*this->decode();       // TODO!!
+        this->execute();
+        this->memio();
+        this->writeback();*/
+
+        this->dumpState();
+        this->copyWriteToRead();
+    }
 }

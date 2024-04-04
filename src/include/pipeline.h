@@ -38,10 +38,19 @@ private:
     Registers_t registers;
 
     // pipeline registers: IF/ID, ID/EX, EX/MEM, MEM/WB
-    PipelineRegisters_t ifId, idEx, exMem, memWb;
+    // one read and one write copy of each 
+    PipelineRegisters_t ifIdRead, idExRead, exMemRead, memWbRead;
+    PipelineRegisters_t ifIdWrite, idExWrite, exMemWrite, memWbWrite;
 
     // main memory (simulated data cache)
     Memory *memory;
+
+    // individual stages of the pipeline
+    int fetch();
+    int decode();
+    int execute();
+    int memio();
+    int writeback();
 
 public:
     Pipeline(Memory *, uint32_t *, size_t);
