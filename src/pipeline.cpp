@@ -36,7 +36,7 @@ Pipeline::Pipeline(Memory *m, uint32_t *binary, size_t size) {
 int Pipeline::emulate() {
     // each loop here corresponds to one CPU cycle
     // TEMPORARILY ONLY DO ONE CYCLE UNTIL I GET IT WORKING
-    for(this->index = 0; this->index < 1; this->index++) {
+    for(this->index = 0; this->index < 2; this->index++) {
         this->fetch();          // go through all 5 stages of the pipeline
         /*this->decode();       // TODO!!
         this->execute();
@@ -44,7 +44,7 @@ int Pipeline::emulate() {
         this->writeback();*/
 
         this->dumpState();
-        //this->copyWriteToRead();
+        this->copyWriteToRead();
     }
 }
 
@@ -79,4 +79,24 @@ void Pipeline::dumpState() {
     cout << endl << "MEM/WB register (read by MEM): " << endl;
     this->memWbRead.dump();
     cout << endl;
+}
+
+/*
+ * copyWriteToRead(): copies the write registers to the read registers and clears out the write ones
+ * Parameters: none
+ * Returns: nothing
+ */
+
+void Pipeline::copyWriteToRead() {
+    this->ifIdRead = this->ifIdWrite;
+    this->idExRead = this->idExWrite;
+    this->exMemRead = this->exMemWrite;
+    this->memWbRead = this->memWbWrite;
+
+    this->ifIdWrite = IfIdRegister();
+    this->idExWrite = IdExRegister();
+    this->exMemWrite = ExMemRegister();
+    this->memWbWrite = MemWbRegister();
+
+    this->pc = this->ifIdRead.newPc;    // TODO: change this to the final thing in MemWb instead when done
 }
