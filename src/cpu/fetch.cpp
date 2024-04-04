@@ -12,4 +12,5 @@ int Pipeline::fetch() {
     // that's literally all there is to this
     this->ifIdWrite.newPc = this->pc + 4;
     this->ifIdWrite.instruction = this->binary[this->index];
+    return 0;
 }
