@@ -18,7 +18,7 @@ int Pipeline::decode() {
     if(this->ifIdRead.instruction) {    // this way NOP (0x00000000) does nothing
         uint8_t opcode = this->ifIdRead.instruction >> 26;
 
-        if(opcode) {
+        if(!opcode) {
             // R-format instruction
             this->idExWrite.regWrite = true;
             this->idExWrite.regDst = true;
