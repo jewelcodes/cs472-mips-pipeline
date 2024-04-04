@@ -20,7 +20,7 @@ Memory::Memory(size_t size) {
 }
 
 /*
- * read(): reads a byte from physical memory
+ * read(): reads a byte from memory
  * Parameters: address - address of the byte to read
  * Returns: value from said address
  */
@@ -35,7 +35,7 @@ uint8_t Memory::read(uint32_t address) {
 }
 
 /*
- * write(): writes a byte to physical memory
+ * write(): writes a byte to memory
  * Parameters: address - address of the byte to write
  * Parameters: data - the byte to be written
  * Returns: nothing
