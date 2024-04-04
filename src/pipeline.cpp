@@ -9,8 +9,8 @@
 #include <cstring>      // memset, memmove for pipeline register files
 
 /* CONSTRUCTOR */
-Pipeline::Pipeline(Memory *memory, uint32_t *binary, size_t size) {
-    this->memory = memory;
+Pipeline::Pipeline(Memory *m, uint32_t *binary, size_t size) {
+    this->mainMemory = m;
     this->binary = binary;
     this->size = size/4;    // in dwords (instruction count)
     this->index = 0;        // dword index into the binry
@@ -21,14 +21,7 @@ Pipeline::Pipeline(Memory *memory, uint32_t *binary, size_t size) {
     }
 
     // reset all the control signals to start with all nops
-    memset(&this->ifIdRead, 0, sizeof(PipelineRegisters_t));
-    memset(&this->idExRead, 0, sizeof(PipelineRegisters_t));
-    memset(&this->exMemRead, 0, sizeof(PipelineRegisters_t));
-    memset(&this->memWbRead, 0, sizeof(PipelineRegisters_t));
-    memset(&this->ifIdWrite, 0, sizeof(PipelineRegisters_t));
-    memset(&this->idExWrite, 0, sizeof(PipelineRegisters_t));
-    memset(&this->exMemWrite, 0, sizeof(PipelineRegisters_t));
-    memset(&this->memWbWrite, 0, sizeof(PipelineRegisters_t));
+
 
     // the assignment doesn't explicitly state what PC to start with so i'm
     // choosing an arbitrary value here just to have something to dump
@@ -50,7 +43,7 @@ int Pipeline::emulate() {
         this->memory();
         this->writeback();*/
 
-        this->dumpState();
-        this->copyWriteToRead();
+        /*this->dumpState();
+        this->copyWriteToRead();*/
     }
 }
