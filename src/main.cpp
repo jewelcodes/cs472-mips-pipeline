@@ -31,6 +31,5 @@ int main(int argc, char **argv) {
 
     // create instance of pipeline
     Pipeline p(&m, (uint32_t *)buffer.data(), size);
-    //return p.emulate();
-    return 0;
+    return p.emulate();
 }

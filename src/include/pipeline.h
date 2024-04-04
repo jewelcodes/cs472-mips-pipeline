@@ -23,7 +23,7 @@ typedef struct Registers_t {
 typedef struct PipelineRegisters_t {
     bool regWrite, regDst, memToReg, memRead, memWrite, ALUSrc, Branch;
     uint8_t ALUOp;      // 2-bits wide so we will fit this into a byte
-} PipelineRegister_t;
+} PipelineRegisters_t;
 
 /* General CPU Class */
 
@@ -32,6 +32,7 @@ private:
     uint32_t *binary;
     size_t size;
     uint32_t pc;
+    size_t index;
 
     // CPU registers
     Registers_t registers;
@@ -44,4 +45,5 @@ private:
 
 public:
     Pipeline(Memory *, uint32_t *, size_t);
+    int emulate();
 };
