@@ -6,7 +6,6 @@
 
 #include <pipeline.h>
 #include <memory.h>
-#include <cstring>      // memset, memmove for pipeline register files
 #include <iostream>
 #include <iomanip>
 
