@@ -68,10 +68,17 @@ int Pipeline::execute() {
     // set the ALU's zero flag appropriately
     this->exMemWrite.zero = (this->exMemWrite.aluResult == 0);
 
+    // determine if a memory write is happening in the next stage
+    if(this->idExRead.memWrite) {
+        this->exMemWrite.memValue = this->idExRead.readReg[1];
+    }
+
     // the remaining signals aren't used by the ALU; they can just be copied for the next stage
     this->exMemWrite.regWrite = this->idExRead.regWrite;
     this->exMemWrite.memToReg = this->idExRead.memToReg;
     this->exMemWrite.memRead = this->idExRead.memRead;
     this->exMemWrite.memWrite = this->idExRead.memWrite;
     this->exMemWrite.branch = this->idExRead.branch;
+    
+    return 0;
 }
