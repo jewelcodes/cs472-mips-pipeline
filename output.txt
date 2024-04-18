@@ -1,0 +1,492 @@
+[Cycle 0] Clock cycle 0:
+[Cycle 0] IF/ID register (written by IF): 
+[Cycle 0] pc = 0x00004  instr = 0xA1020000
+
+[Cycle 0] IF/ID register (read by ID): 
+[Cycle 0] pc = 0x00000  instr = 0x00000000
+
+[Cycle 0] ID/EX register (written by ID): 
+[Cycle 0] pc = 0x00000
+[Cycle 0] control: regwrite=0  regdst=0  memtoreg=0  memread=0  memwrite=0  alusrc=0
+[Cycle 0]          branch=0    aluop=00  function=0x00
+[Cycle 0] reg1 = 0x00000000  reg2 = 0x00000000  seoffset = 0x00000000
+[Cycle 0] writereg_20_16 = 0  writereg_15_11 = 0
+
+[Cycle 0] ID/EX register (read by EX): 
+[Cycle 0] pc = 0x00000
+[Cycle 0] control: regwrite=0  regdst=0  memtoreg=0  memread=0  memwrite=0  alusrc=0
+[Cycle 0]          branch=0    aluop=00  function=0x00
+[Cycle 0] reg1 = 0x00000000  reg2 = 0x00000000  seoffset = 0x00000000
+[Cycle 0] writereg_20_16 = 0  writereg_15_11 = 0
+
+[Cycle 0] EX/MEM register (written by EX): 
+[Cycle 0] pc = 0x00000
+[Cycle 0] control: regwrite=0  memtoreg=0  memread=0  memwrite=0  branch=0  zero=1
+[Cycle 0] writereg = 0  branchtarget = 0x00000000  aluresult = 0x00000000  sw = 0x00000000
+
+[Cycle 0] EX/MEM register (read by MEM): 
+[Cycle 0] pc = 0x00000
+[Cycle 0] control: regwrite=0  memtoreg=0  memread=0  memwrite=0  branch=0  zero=0
+[Cycle 0] writereg = 0  branchtarget = 0x00000000  aluresult = 0x00000000  sw = 0x00000000
+
+[Cycle 0] MEM/WB register (written by MEM): 
+[Cycle 0] pc = 0x00000
+[Cycle 0] control: regwrite=0  memtoreg=0
+[Cycle 0] writereg = 0  aluresult = 0x00000000  lw = 0x00000000
+
+[Cycle 0] MEM/WB register (read by WB): 
+[Cycle 0] pc = 0x00000
+[Cycle 0] control: regwrite=0  memtoreg=0
+[Cycle 0] writereg = 0  aluresult = 0x00000000  lw = 0x00000000
+
+[Cycle 1] Clock cycle 1:
+[Cycle 1] IF/ID register (written by IF): 
+[Cycle 1] pc = 0x00008  instr = 0x810AFFFC
+
+[Cycle 1] IF/ID register (read by ID): 
+[Cycle 1] pc = 0x00004  instr = 0xA1020000
+
+[Cycle 1] ID/EX register (written by ID): 
+[Cycle 1] pc = 0x00004
+[Cycle 1] control: regwrite=0  regdst=0  memtoreg=0  memread=0  memwrite=1  alusrc=1
+[Cycle 1]          branch=0    aluop=00  function=0x00
+[Cycle 1] reg1 = 0x00000108  reg2 = 0x00000102  seoffset = 0x00000000
+[Cycle 1] writereg_20_16 = 2  writereg_15_11 = 0
+
+[Cycle 1] ID/EX register (read by EX): 
+[Cycle 1] pc = 0x00000
+[Cycle 1] control: regwrite=0  regdst=0  memtoreg=0  memread=0  memwrite=0  alusrc=0
+[Cycle 1]          branch=0    aluop=00  function=0x00
+[Cycle 1] reg1 = 0x00000000  reg2 = 0x00000000  seoffset = 0x00000000
+[Cycle 1] writereg_20_16 = 0  writereg_15_11 = 0
+
+[Cycle 1] EX/MEM register (written by EX): 
+[Cycle 1] pc = 0x00000
+[Cycle 1] control: regwrite=0  memtoreg=0  memread=0  memwrite=0  branch=0  zero=1
+[Cycle 1] writereg = 0  branchtarget = 0x00000000  aluresult = 0x00000000  sw = 0x00000000
+
+[Cycle 1] EX/MEM register (read by MEM): 
+[Cycle 1] pc = 0x00000
+[Cycle 1] control: regwrite=0  memtoreg=0  memread=0  memwrite=0  branch=0  zero=1
+[Cycle 1] writereg = 0  branchtarget = 0x00000000  aluresult = 0x00000000  sw = 0x00000000
+
+[Cycle 1] MEM/WB register (written by MEM): 
+[Cycle 1] pc = 0x00000
+[Cycle 1] control: regwrite=0  memtoreg=0
+[Cycle 1] writereg = 0  aluresult = 0x00000000  lw = 0x00000000
+
+[Cycle 1] MEM/WB register (read by WB): 
+[Cycle 1] pc = 0x00000
+[Cycle 1] control: regwrite=0  memtoreg=0
+[Cycle 1] writereg = 0  aluresult = 0x00000000  lw = 0x00000000
+
+[Cycle 2] Clock cycle 2:
+[Cycle 2] IF/ID register (written by IF): 
+[Cycle 2] pc = 0x0000C  instr = 0x00831820
+
+[Cycle 2] IF/ID register (read by ID): 
+[Cycle 2] pc = 0x00008  instr = 0x810AFFFC
+
+[Cycle 2] ID/EX register (written by ID): 
+[Cycle 2] pc = 0x00008
+[Cycle 2] control: regwrite=1  regdst=0  memtoreg=1  memread=1  memwrite=0  alusrc=1
+[Cycle 2]          branch=0    aluop=00  function=0x00
+[Cycle 2] reg1 = 0x00000108  reg2 = 0x0000010A  seoffset = 0xFFFFFFFC
+[Cycle 2] writereg_20_16 = 10  writereg_15_11 = 31
+
+[Cycle 2] ID/EX register (read by EX): 
+[Cycle 2] pc = 0x00004
+[Cycle 2] control: regwrite=0  regdst=0  memtoreg=0  memread=0  memwrite=1  alusrc=1
+[Cycle 2]          branch=0    aluop=00  function=0x00
+[Cycle 2] reg1 = 0x00000108  reg2 = 0x00000102  seoffset = 0x00000000
+[Cycle 2] writereg_20_16 = 2  writereg_15_11 = 0
+
+[Cycle 2] EX/MEM register (written by EX): 
+[Cycle 2] pc = 0x00004
+[Cycle 2] control: regwrite=0  memtoreg=0  memread=0  memwrite=1  branch=0  zero=0
+[Cycle 2] writereg = 2  branchtarget = 0x00000004  aluresult = 0x00000108  sw = 0x00000102
+
+[Cycle 2] EX/MEM register (read by MEM): 
+[Cycle 2] pc = 0x00000
+[Cycle 2] control: regwrite=0  memtoreg=0  memread=0  memwrite=0  branch=0  zero=1
+[Cycle 2] writereg = 0  branchtarget = 0x00000000  aluresult = 0x00000000  sw = 0x00000000
+
+[Cycle 2] MEM/WB register (written by MEM): 
+[Cycle 2] pc = 0x00000
+[Cycle 2] control: regwrite=0  memtoreg=0
+[Cycle 2] writereg = 0  aluresult = 0x00000000  lw = 0x00000000
+
+[Cycle 2] MEM/WB register (read by WB): 
+[Cycle 2] pc = 0x00000
+[Cycle 2] control: regwrite=0  memtoreg=0
+[Cycle 2] writereg = 0  aluresult = 0x00000000  lw = 0x00000000
+
+[Cycle 3] Clock cycle 3:
+[Cycle 3] IF/ID register (written by IF): 
+[Cycle 3] pc = 0x00010  instr = 0x01263820
+
+[Cycle 3] IF/ID register (read by ID): 
+[Cycle 3] pc = 0x0000C  instr = 0x00831820
+
+[Cycle 3] ID/EX register (written by ID): 
+[Cycle 3] pc = 0x0000C
+[Cycle 3] control: regwrite=1  regdst=1  memtoreg=0  memread=0  memwrite=0  alusrc=0
+[Cycle 3]          branch=1    aluop=10  function=0x20
+[Cycle 3] reg1 = 0x00000104  reg2 = 0x00000103  seoffset = 0x00001820
+[Cycle 3] writereg_20_16 = 3  writereg_15_11 = 3
+
+[Cycle 3] ID/EX register (read by EX): 
+[Cycle 3] pc = 0x00008
+[Cycle 3] control: regwrite=1  regdst=0  memtoreg=1  memread=1  memwrite=0  alusrc=1
+[Cycle 3]          branch=0    aluop=00  function=0x00
+[Cycle 3] reg1 = 0x00000108  reg2 = 0x0000010A  seoffset = 0xFFFFFFFC
+[Cycle 3] writereg_20_16 = 10  writereg_15_11 = 31
+
+[Cycle 3] EX/MEM register (written by EX): 
+[Cycle 3] pc = 0x00008
+[Cycle 3] control: regwrite=1  memtoreg=1  memread=1  memwrite=0  branch=0  zero=0
+[Cycle 3] writereg = 10  branchtarget = 0xFFFFFFF8  aluresult = 0x00000104  sw = 0x00000000
+
+[Cycle 3] EX/MEM register (read by MEM): 
+[Cycle 3] pc = 0x00004
+[Cycle 3] control: regwrite=0  memtoreg=0  memread=0  memwrite=1  branch=0  zero=0
+[Cycle 3] writereg = 2  branchtarget = 0x00000004  aluresult = 0x00000108  sw = 0x00000102
+
+[Cycle 3] MEM/WB register (written by MEM): 
+[Cycle 3] pc = 0x00004
+[Cycle 3] control: regwrite=0  memtoreg=0
+[Cycle 3] writereg = 2  aluresult = 0x00000108  lw = 0x00000000
+
+[Cycle 3] MEM/WB register (read by WB): 
+[Cycle 3] pc = 0x00000
+[Cycle 3] control: regwrite=0  memtoreg=0
+[Cycle 3] writereg = 0  aluresult = 0x00000000  lw = 0x00000000
+
+[Cycle 4] Clock cycle 4:
+[Cycle 4] IF/ID register (written by IF): 
+[Cycle 4] pc = 0x00014  instr = 0x01224820
+
+[Cycle 4] IF/ID register (read by ID): 
+[Cycle 4] pc = 0x00010  instr = 0x01263820
+
+[Cycle 4] ID/EX register (written by ID): 
+[Cycle 4] pc = 0x00010
+[Cycle 4] control: regwrite=1  regdst=1  memtoreg=0  memread=0  memwrite=0  alusrc=0
+[Cycle 4]          branch=1    aluop=10  function=0x20
+[Cycle 4] reg1 = 0x00000109  reg2 = 0x00000106  seoffset = 0x00003820
+[Cycle 4] writereg_20_16 = 6  writereg_15_11 = 7
+
+[Cycle 4] ID/EX register (read by EX): 
+[Cycle 4] pc = 0x0000C
+[Cycle 4] control: regwrite=1  regdst=1  memtoreg=0  memread=0  memwrite=0  alusrc=0
+[Cycle 4]          branch=1    aluop=10  function=0x20
+[Cycle 4] reg1 = 0x00000104  reg2 = 0x00000103  seoffset = 0x00001820
+[Cycle 4] writereg_20_16 = 3  writereg_15_11 = 3
+
+[Cycle 4] EX/MEM register (written by EX): 
+[Cycle 4] pc = 0x0000C
+[Cycle 4] control: regwrite=1  memtoreg=0  memread=0  memwrite=0  branch=0  zero=0
+[Cycle 4] writereg = 3  branchtarget = 0x0000608C  aluresult = 0x00000207  sw = 0x00000000
+
+[Cycle 4] EX/MEM register (read by MEM): 
+[Cycle 4] pc = 0x00008
+[Cycle 4] control: regwrite=1  memtoreg=1  memread=1  memwrite=0  branch=0  zero=0
+[Cycle 4] writereg = 10  branchtarget = 0xFFFFFFF8  aluresult = 0x00000104  sw = 0x00000000
+
+[Cycle 4] MEM/WB register (written by MEM): 
+[Cycle 4] pc = 0x00008
+[Cycle 4] control: regwrite=1  memtoreg=1
+[Cycle 4] writereg = 10  aluresult = 0x00000104  lw = 0x00000004
+
+[Cycle 4] MEM/WB register (read by WB): 
+[Cycle 4] pc = 0x00004
+[Cycle 4] control: regwrite=0  memtoreg=0
+[Cycle 4] writereg = 2  aluresult = 0x00000108  lw = 0x00000000
+
+[Cycle 5] Clock cycle 5:
+[Cycle 5] IF/ID register (written by IF): 
+[Cycle 5] pc = 0x00018  instr = 0x81180000
+
+[Cycle 5] IF/ID register (read by ID): 
+[Cycle 5] pc = 0x00014  instr = 0x01224820
+
+[Cycle 5] ID/EX register (written by ID): 
+[Cycle 5] pc = 0x00014
+[Cycle 5] control: regwrite=1  regdst=1  memtoreg=0  memread=0  memwrite=0  alusrc=0
+[Cycle 5]          branch=1    aluop=10  function=0x20
+[Cycle 5] reg1 = 0x00000109  reg2 = 0x00000102  seoffset = 0x00004820
+[Cycle 5] writereg_20_16 = 2  writereg_15_11 = 9
+
+[Cycle 5] ID/EX register (read by EX): 
+[Cycle 5] pc = 0x00010
+[Cycle 5] control: regwrite=1  regdst=1  memtoreg=0  memread=0  memwrite=0  alusrc=0
+[Cycle 5]          branch=1    aluop=10  function=0x20
+[Cycle 5] reg1 = 0x00000109  reg2 = 0x00000106  seoffset = 0x00003820
+[Cycle 5] writereg_20_16 = 6  writereg_15_11 = 7
+
+[Cycle 5] EX/MEM register (written by EX): 
+[Cycle 5] pc = 0x00010
+[Cycle 5] control: regwrite=1  memtoreg=0  memread=0  memwrite=0  branch=0  zero=0
+[Cycle 5] writereg = 7  branchtarget = 0x0000E090  aluresult = 0x0000020F  sw = 0x00000000
+
+[Cycle 5] EX/MEM register (read by MEM): 
+[Cycle 5] pc = 0x0000C
+[Cycle 5] control: regwrite=1  memtoreg=0  memread=0  memwrite=0  branch=0  zero=0
+[Cycle 5] writereg = 3  branchtarget = 0x0000608C  aluresult = 0x00000207  sw = 0x00000000
+
+[Cycle 5] MEM/WB register (written by MEM): 
+[Cycle 5] pc = 0x0000C
+[Cycle 5] control: regwrite=1  memtoreg=0
+[Cycle 5] writereg = 3  aluresult = 0x00000207  lw = 0x00000000
+
+[Cycle 5] MEM/WB register (read by WB): 
+[Cycle 5] pc = 0x00008
+[Cycle 5] control: regwrite=1  memtoreg=1
+[Cycle 5] writereg = 10  aluresult = 0x00000104  lw = 0x00000004
+
+[Cycle 6] Clock cycle 6:
+[Cycle 6] IF/ID register (written by IF): 
+[Cycle 6] pc = 0x0001C  instr = 0x81510010
+
+[Cycle 6] IF/ID register (read by ID): 
+[Cycle 6] pc = 0x00018  instr = 0x81180000
+
+[Cycle 6] ID/EX register (written by ID): 
+[Cycle 6] pc = 0x00018
+[Cycle 6] control: regwrite=1  regdst=0  memtoreg=1  memread=1  memwrite=0  alusrc=1
+[Cycle 6]          branch=0    aluop=00  function=0x00
+[Cycle 6] reg1 = 0x00000108  reg2 = 0x00000118  seoffset = 0x00000000
+[Cycle 6] writereg_20_16 = 24  writereg_15_11 = 0
+
+[Cycle 6] ID/EX register (read by EX): 
+[Cycle 6] pc = 0x00014
+[Cycle 6] control: regwrite=1  regdst=1  memtoreg=0  memread=0  memwrite=0  alusrc=0
+[Cycle 6]          branch=1    aluop=10  function=0x20
+[Cycle 6] reg1 = 0x00000109  reg2 = 0x00000102  seoffset = 0x00004820
+[Cycle 6] writereg_20_16 = 2  writereg_15_11 = 9
+
+[Cycle 6] EX/MEM register (written by EX): 
+[Cycle 6] pc = 0x00014
+[Cycle 6] control: regwrite=1  memtoreg=0  memread=0  memwrite=0  branch=0  zero=0
+[Cycle 6] writereg = 9  branchtarget = 0x00012094  aluresult = 0x0000020B  sw = 0x00000000
+
+[Cycle 6] EX/MEM register (read by MEM): 
+[Cycle 6] pc = 0x00010
+[Cycle 6] control: regwrite=1  memtoreg=0  memread=0  memwrite=0  branch=0  zero=0
+[Cycle 6] writereg = 7  branchtarget = 0x0000E090  aluresult = 0x0000020F  sw = 0x00000000
+
+[Cycle 6] MEM/WB register (written by MEM): 
+[Cycle 6] pc = 0x00010
+[Cycle 6] control: regwrite=1  memtoreg=0
+[Cycle 6] writereg = 7  aluresult = 0x0000020F  lw = 0x00000000
+
+[Cycle 6] MEM/WB register (read by WB): 
+[Cycle 6] pc = 0x0000C
+[Cycle 6] control: regwrite=1  memtoreg=0
+[Cycle 6] writereg = 3  aluresult = 0x00000207  lw = 0x00000000
+
+[Cycle 7] Clock cycle 7:
+[Cycle 7] IF/ID register (written by IF): 
+[Cycle 7] pc = 0x00020  instr = 0x00624022
+
+[Cycle 7] IF/ID register (read by ID): 
+[Cycle 7] pc = 0x0001C  instr = 0x81510010
+
+[Cycle 7] ID/EX register (written by ID): 
+[Cycle 7] pc = 0x0001C
+[Cycle 7] control: regwrite=1  regdst=0  memtoreg=1  memread=1  memwrite=0  alusrc=1
+[Cycle 7]          branch=0    aluop=00  function=0x00
+[Cycle 7] reg1 = 0x00000004  reg2 = 0x00000111  seoffset = 0x00000010
+[Cycle 7] writereg_20_16 = 17  writereg_15_11 = 0
+
+[Cycle 7] ID/EX register (read by EX): 
+[Cycle 7] pc = 0x00018
+[Cycle 7] control: regwrite=1  regdst=0  memtoreg=1  memread=1  memwrite=0  alusrc=1
+[Cycle 7]          branch=0    aluop=00  function=0x00
+[Cycle 7] reg1 = 0x00000108  reg2 = 0x00000118  seoffset = 0x00000000
+[Cycle 7] writereg_20_16 = 24  writereg_15_11 = 0
+
+[Cycle 7] EX/MEM register (written by EX): 
+[Cycle 7] pc = 0x00018
+[Cycle 7] control: regwrite=1  memtoreg=1  memread=1  memwrite=0  branch=0  zero=0
+[Cycle 7] writereg = 24  branchtarget = 0x00000018  aluresult = 0x00000108  sw = 0x00000000
+
+[Cycle 7] EX/MEM register (read by MEM): 
+[Cycle 7] pc = 0x00014
+[Cycle 7] control: regwrite=1  memtoreg=0  memread=0  memwrite=0  branch=0  zero=0
+[Cycle 7] writereg = 9  branchtarget = 0x00012094  aluresult = 0x0000020B  sw = 0x00000000
+
+[Cycle 7] MEM/WB register (written by MEM): 
+[Cycle 7] pc = 0x00014
+[Cycle 7] control: regwrite=1  memtoreg=0
+[Cycle 7] writereg = 9  aluresult = 0x0000020B  lw = 0x00000000
+
+[Cycle 7] MEM/WB register (read by WB): 
+[Cycle 7] pc = 0x00010
+[Cycle 7] control: regwrite=1  memtoreg=0
+[Cycle 7] writereg = 7  aluresult = 0x0000020F  lw = 0x00000000
+
+[Cycle 8] Clock cycle 8:
+[Cycle 8] IF/ID register (written by IF): 
+[Cycle 8] pc = 0x00024  instr = 0x00000000
+
+[Cycle 8] IF/ID register (read by ID): 
+[Cycle 8] pc = 0x00020  instr = 0x00624022
+
+[Cycle 8] ID/EX register (written by ID): 
+[Cycle 8] pc = 0x00020
+[Cycle 8] control: regwrite=1  regdst=1  memtoreg=0  memread=0  memwrite=0  alusrc=0
+[Cycle 8]          branch=1    aluop=10  function=0x22
+[Cycle 8] reg1 = 0x00000207  reg2 = 0x00000102  seoffset = 0x00004022
+[Cycle 8] writereg_20_16 = 2  writereg_15_11 = 8
+
+[Cycle 8] ID/EX register (read by EX): 
+[Cycle 8] pc = 0x0001C
+[Cycle 8] control: regwrite=1  regdst=0  memtoreg=1  memread=1  memwrite=0  alusrc=1
+[Cycle 8]          branch=0    aluop=00  function=0x00
+[Cycle 8] reg1 = 0x00000004  reg2 = 0x00000111  seoffset = 0x00000010
+[Cycle 8] writereg_20_16 = 17  writereg_15_11 = 0
+
+[Cycle 8] EX/MEM register (written by EX): 
+[Cycle 8] pc = 0x0001C
+[Cycle 8] control: regwrite=1  memtoreg=1  memread=1  memwrite=0  branch=0  zero=0
+[Cycle 8] writereg = 17  branchtarget = 0x0000005C  aluresult = 0x00000014  sw = 0x00000000
+
+[Cycle 8] EX/MEM register (read by MEM): 
+[Cycle 8] pc = 0x00018
+[Cycle 8] control: regwrite=1  memtoreg=1  memread=1  memwrite=0  branch=0  zero=0
+[Cycle 8] writereg = 24  branchtarget = 0x00000018  aluresult = 0x00000108  sw = 0x00000000
+
+[Cycle 8] MEM/WB register (written by MEM): 
+[Cycle 8] pc = 0x00018
+[Cycle 8] control: regwrite=1  memtoreg=1
+[Cycle 8] writereg = 24  aluresult = 0x00000108  lw = 0x00000002
+
+[Cycle 8] MEM/WB register (read by WB): 
+[Cycle 8] pc = 0x00014
+[Cycle 8] control: regwrite=1  memtoreg=0
+[Cycle 8] writereg = 9  aluresult = 0x0000020B  lw = 0x00000000
+
+[Cycle 9] Clock cycle 9:
+[Cycle 9] IF/ID register (written by IF): 
+[Cycle 9] pc = 0x00028  instr = 0x00000000
+
+[Cycle 9] IF/ID register (read by ID): 
+[Cycle 9] pc = 0x00024  instr = 0x00000000
+
+[Cycle 9] ID/EX register (written by ID): 
+[Cycle 9] pc = 0x00024
+[Cycle 9] control: regwrite=0  regdst=0  memtoreg=0  memread=0  memwrite=0  alusrc=0
+[Cycle 9]          branch=0    aluop=00  function=0x00
+[Cycle 9] reg1 = 0x00000000  reg2 = 0x00000000  seoffset = 0x00000000
+[Cycle 9] writereg_20_16 = 0  writereg_15_11 = 0
+
+[Cycle 9] ID/EX register (read by EX): 
+[Cycle 9] pc = 0x00020
+[Cycle 9] control: regwrite=1  regdst=1  memtoreg=0  memread=0  memwrite=0  alusrc=0
+[Cycle 9]          branch=1    aluop=10  function=0x22
+[Cycle 9] reg1 = 0x00000207  reg2 = 0x00000102  seoffset = 0x00004022
+[Cycle 9] writereg_20_16 = 2  writereg_15_11 = 8
+
+[Cycle 9] EX/MEM register (written by EX): 
+[Cycle 9] pc = 0x00020
+[Cycle 9] control: regwrite=1  memtoreg=0  memread=0  memwrite=0  branch=0  zero=0
+[Cycle 9] writereg = 8  branchtarget = 0x000100A8  aluresult = 0x00000105  sw = 0x00000000
+
+[Cycle 9] EX/MEM register (read by MEM): 
+[Cycle 9] pc = 0x0001C
+[Cycle 9] control: regwrite=1  memtoreg=1  memread=1  memwrite=0  branch=0  zero=0
+[Cycle 9] writereg = 17  branchtarget = 0x0000005C  aluresult = 0x00000014  sw = 0x00000000
+
+[Cycle 9] MEM/WB register (written by MEM): 
+[Cycle 9] pc = 0x0001C
+[Cycle 9] control: regwrite=1  memtoreg=1
+[Cycle 9] writereg = 17  aluresult = 0x00000014  lw = 0x00000014
+
+[Cycle 9] MEM/WB register (read by WB): 
+[Cycle 9] pc = 0x00018
+[Cycle 9] control: regwrite=1  memtoreg=1
+[Cycle 9] writereg = 24  aluresult = 0x00000108  lw = 0x00000002
+
+[Cycle 10] Clock cycle 10:
+[Cycle 10] IF/ID register (written by IF): 
+[Cycle 10] pc = 0x0002C  instr = 0x00000000
+
+[Cycle 10] IF/ID register (read by ID): 
+[Cycle 10] pc = 0x00028  instr = 0x00000000
+
+[Cycle 10] ID/EX register (written by ID): 
+[Cycle 10] pc = 0x00028
+[Cycle 10] control: regwrite=0  regdst=0  memtoreg=0  memread=0  memwrite=0  alusrc=0
+[Cycle 10]          branch=0    aluop=00  function=0x00
+[Cycle 10] reg1 = 0x00000000  reg2 = 0x00000000  seoffset = 0x00000000
+[Cycle 10] writereg_20_16 = 0  writereg_15_11 = 0
+
+[Cycle 10] ID/EX register (read by EX): 
+[Cycle 10] pc = 0x00024
+[Cycle 10] control: regwrite=0  regdst=0  memtoreg=0  memread=0  memwrite=0  alusrc=0
+[Cycle 10]          branch=0    aluop=00  function=0x00
+[Cycle 10] reg1 = 0x00000000  reg2 = 0x00000000  seoffset = 0x00000000
+[Cycle 10] writereg_20_16 = 0  writereg_15_11 = 0
+
+[Cycle 10] EX/MEM register (written by EX): 
+[Cycle 10] pc = 0x00024
+[Cycle 10] control: regwrite=0  memtoreg=0  memread=0  memwrite=0  branch=0  zero=1
+[Cycle 10] writereg = 0  branchtarget = 0x00000024  aluresult = 0x00000000  sw = 0x00000000
+
+[Cycle 10] EX/MEM register (read by MEM): 
+[Cycle 10] pc = 0x00020
+[Cycle 10] control: regwrite=1  memtoreg=0  memread=0  memwrite=0  branch=0  zero=0
+[Cycle 10] writereg = 8  branchtarget = 0x000100A8  aluresult = 0x00000105  sw = 0x00000000
+
+[Cycle 10] MEM/WB register (written by MEM): 
+[Cycle 10] pc = 0x00020
+[Cycle 10] control: regwrite=1  memtoreg=0
+[Cycle 10] writereg = 8  aluresult = 0x00000105  lw = 0x00000000
+
+[Cycle 10] MEM/WB register (read by WB): 
+[Cycle 10] pc = 0x0001C
+[Cycle 10] control: regwrite=1  memtoreg=1
+[Cycle 10] writereg = 17  aluresult = 0x00000014  lw = 0x00000014
+
+[Cycle 11] Clock cycle 11:
+[Cycle 11] IF/ID register (written by IF): 
+[Cycle 11] pc = 0x00030  instr = 0x00000000
+
+[Cycle 11] IF/ID register (read by ID): 
+[Cycle 11] pc = 0x0002C  instr = 0x00000000
+
+[Cycle 11] ID/EX register (written by ID): 
+[Cycle 11] pc = 0x0002C
+[Cycle 11] control: regwrite=0  regdst=0  memtoreg=0  memread=0  memwrite=0  alusrc=0
+[Cycle 11]          branch=0    aluop=00  function=0x00
+[Cycle 11] reg1 = 0x00000000  reg2 = 0x00000000  seoffset = 0x00000000
+[Cycle 11] writereg_20_16 = 0  writereg_15_11 = 0
+
+[Cycle 11] ID/EX register (read by EX): 
+[Cycle 11] pc = 0x00028
+[Cycle 11] control: regwrite=0  regdst=0  memtoreg=0  memread=0  memwrite=0  alusrc=0
+[Cycle 11]          branch=0    aluop=00  function=0x00
+[Cycle 11] reg1 = 0x00000000  reg2 = 0x00000000  seoffset = 0x00000000
+[Cycle 11] writereg_20_16 = 0  writereg_15_11 = 0
+
+[Cycle 11] EX/MEM register (written by EX): 
+[Cycle 11] pc = 0x00028
+[Cycle 11] control: regwrite=0  memtoreg=0  memread=0  memwrite=0  branch=0  zero=1
+[Cycle 11] writereg = 0  branchtarget = 0x00000028  aluresult = 0x00000000  sw = 0x00000000
+
+[Cycle 11] EX/MEM register (read by MEM): 
+[Cycle 11] pc = 0x00024
+[Cycle 11] control: regwrite=0  memtoreg=0  memread=0  memwrite=0  branch=0  zero=1
+[Cycle 11] writereg = 0  branchtarget = 0x00000024  aluresult = 0x00000000  sw = 0x00000000
+
+[Cycle 11] MEM/WB register (written by MEM): 
+[Cycle 11] pc = 0x00024
+[Cycle 11] control: regwrite=0  memtoreg=0
+[Cycle 11] writereg = 0  aluresult = 0x00000000  lw = 0x00000000
+
+[Cycle 11] MEM/WB register (read by WB): 
+[Cycle 11] pc = 0x00020
+[Cycle 11] control: regwrite=1  memtoreg=0
+[Cycle 11] writereg = 8  aluresult = 0x00000105  lw = 0x00000000
+
