@@ -31,17 +31,22 @@ typedef struct Registers_t {
 
 /* Pipeline Register Files */
 
-class IfIdRegister {
+class PipelineRegister {
+public:
+    void outputPrefix(size_t);
+};
+
+class IfIdRegister : public PipelineRegister {
 public:
     uint32_t newPc;
     uint32_t instruction;
 
     IfIdRegister();
-    void dump();
+    void dump(size_t);
     void clear();
 };
 
-class IdExRegister {
+class IdExRegister : public PipelineRegister {
 public:
     uint32_t newPc;
     bool regWrite, regDst, memToReg, memRead, memWrite, aluSrc, branch;
@@ -51,11 +56,11 @@ public:
     uint8_t writeReg20_16, writeReg15_11;
 
     IdExRegister();
-    void dump();
+    void dump(size_t);
     void clear();
 };
 
-class ExMemRegister {
+class ExMemRegister : public PipelineRegister {
 public:
     uint32_t newPc;
     bool regWrite, memToReg, memRead, memWrite, branch, zero;
@@ -63,11 +68,11 @@ public:
     uint8_t writeRegNumber;
 
     ExMemRegister();
-    void dump();
+    void dump(size_t);
     void clear();
 };
 
-class MemWbRegister {
+class MemWbRegister : public PipelineRegister {
 public:
     uint32_t newPc;
     bool regWrite, memToReg;
@@ -75,7 +80,7 @@ public:
     uint8_t writeRegNumber;
 
     MemWbRegister();
-    void dump();
+    void dump(size_t);
     void clear();
 };
 
@@ -113,4 +118,7 @@ public:
     int emulate();
     void dumpState();
     void copyWriteToRead();
+
+    // this is really just to make the output prettier
+    void outputPrefix();
 };

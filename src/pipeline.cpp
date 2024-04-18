@@ -57,30 +57,53 @@ int Pipeline::emulate() {
  */
 
 void Pipeline::dumpState() {
-    cout << "Clock cycle " << dec << this->index << ":" << endl;
+    outputPrefix();
+    cout << "Clock cycle " << dec << setw(0) << this->index << ":" << endl;
+    outputPrefix();
     cout << "IF/ID register (written by IF): " << endl;
-    this->ifIdWrite.dump();
-    cout << endl << "IF/ID register (read by ID): " << endl;
-    this->ifIdRead.dump();
+    this->ifIdWrite.dump(this->index);
+    cout << endl;
+    outputPrefix();
+    cout << "IF/ID register (read by ID): " << endl;
+    this->ifIdRead.dump(this->index);
     cout << endl;
 
+    outputPrefix();
     cout << "ID/EX register (written by ID): " << endl;
-    this->idExWrite.dump();
-    cout << endl << "ID/EX register (read by EX): " << endl;
-    this->idExRead.dump();
+    this->idExWrite.dump(this->index);
+    cout << endl;
+    outputPrefix();
+    cout << "ID/EX register (read by EX): " << endl;
+    this->idExRead.dump(this->index);
     cout << endl;
 
+    outputPrefix();
     cout << "EX/MEM register (written by EX): " << endl;
-    this->exMemWrite.dump();
-    cout << endl << "EX/MEM register (read by MEM): " << endl;
-    this->exMemRead.dump();
+    this->exMemWrite.dump(this->index);
+    cout << endl;
+    outputPrefix();
+    cout << "EX/MEM register (read by MEM): " << endl;
+    this->exMemRead.dump(this->index);
     cout << endl;
 
+    outputPrefix();
     cout << "MEM/WB register (written by MEM): " << endl;
-    this->memWbWrite.dump();
-    cout << endl << "MEM/WB register (read by WB): " << endl;
-    this->memWbRead.dump();
+    this->memWbWrite.dump(this->index);
     cout << endl;
+    outputPrefix();
+    cout << "MEM/WB register (read by WB): " << endl;
+    this->memWbRead.dump(this->index);
+    cout << endl;
+}
+
+/*
+ * outputPrefix(): this is just to make the output a little prettier and easier to read
+ * Parameters: none
+ * Returns: nothing
+ */
+
+void Pipeline::outputPrefix() {
+    cout << "[Cycle " << dec << setw(1) << this->index << "] ";
 }
 
 /*

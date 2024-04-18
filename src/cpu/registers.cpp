@@ -76,17 +76,24 @@ void MemWbRegister::clear() {
 
 /* Dump functions */
 
-void IfIdRegister::dump() {
+void PipelineRegister::outputPrefix(size_t cycle) {
+    cout << "[Cycle " << dec << setw(1) << cycle << "] ";
+}
+
+void IfIdRegister::dump(size_t cycle) {
+    outputPrefix(cycle);
     cout << "pc = 0x";
     cout << hex << setw(5) << setfill('0') << uppercase << this->newPc;
     cout << "  instr = 0x";
     cout << hex << setw(8) << setfill('0') << uppercase << this->instruction << endl;
 }
 
-void IdExRegister::dump() {
+void IdExRegister::dump(size_t cycle) {
     // I could kiss whoever invented the ternary operator
+    outputPrefix(cycle);
     cout << "pc = 0x";
     cout << hex << setw(5) << setfill('0') << uppercase << this->newPc << endl;
+    outputPrefix(cycle);
     cout << "control: ";
     cout << "regwrite=";
     cout << (this->regWrite ? "1" : "0");
@@ -100,7 +107,9 @@ void IdExRegister::dump() {
     cout << (this->memWrite ? "1" : "0");
     cout << "  alusrc=";
     cout << (this->aluSrc ? "1" : "0");
-    cout << endl << "         branch=";
+    cout << endl;
+    outputPrefix(cycle);
+    cout << "         branch=";
     cout << (this->regDst ? "1" : "0");
     cout << "    aluop=";
     bitset<2> aluOp(this->aluOp);
@@ -109,6 +118,7 @@ void IdExRegister::dump() {
     cout << hex << setw(2) << setfill('0') << uppercase << (uint32_t)this->function;
     cout << endl;
 
+    outputPrefix(cycle);
     cout << "reg1 = 0x";
     cout << hex << setw(8) << setfill('0') << uppercase << this->readReg[0];
     cout << "  reg2 = 0x";
@@ -117,6 +127,7 @@ void IdExRegister::dump() {
     cout << hex << setw(8) << setfill('0') << uppercase << this->signExtOffset;
     cout << endl;
 
+    outputPrefix(cycle);
     cout << "writereg_20_16 = ";
     cout << dec << setw(0) << (uint32_t)this->writeReg20_16;
     cout << "  writereg_15_11 = ";
@@ -125,9 +136,12 @@ void IdExRegister::dump() {
     cout << endl;
 }
 
-void ExMemRegister::dump() {
+void ExMemRegister::dump(size_t cycle) {
+    outputPrefix(cycle);
     cout << "pc = 0x";
     cout << hex << setw(5) << setfill('0') << uppercase << this->newPc << endl;
+
+    outputPrefix(cycle);
     cout << "control: ";
     cout << "regwrite=";
     cout << (this->regWrite ? "1" : "0");
@@ -143,6 +157,7 @@ void ExMemRegister::dump() {
     cout << (this->zero ? "1" : "0");
     cout << endl;
 
+    outputPrefix(cycle);
     cout << "writereg = ";
     cout << dec << setw(0) << (uint32_t)this->writeRegNumber;
     cout << "  branchtarget = 0x";
@@ -155,9 +170,12 @@ void ExMemRegister::dump() {
     cout << endl;
 }
 
-void MemWbRegister::dump() {
+void MemWbRegister::dump(size_t cycle) {
+    outputPrefix(cycle);
     cout << "pc = 0x";
     cout << hex << setw(5) << setfill('0') << uppercase << this->newPc << endl;
+
+    outputPrefix(cycle);
     cout << "control: ";
     cout << "regwrite=";
     cout << (this->regWrite ? "1" : "0");
@@ -165,6 +183,7 @@ void MemWbRegister::dump() {
     cout << (this->memToReg ? "1" : "0");
     cout << endl;
 
+    outputPrefix(cycle);
     cout << "writereg = ";
     cout << dec << setw(0) << (uint32_t)this->writeRegNumber;
     cout << "  aluresult = 0x";
