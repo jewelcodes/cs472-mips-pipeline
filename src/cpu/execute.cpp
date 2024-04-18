@@ -8,7 +8,7 @@
 #include <iostream>
 #include <iomanip>
 
-/* Instruction Execute Stage */
+/* Stage 3: Instruction Execute Stage */
 
 int Pipeline::execute() {
     this->exMemWrite.clear();

@@ -8,8 +8,8 @@
 
 /* This is identical to the physical memory from assignment 2 (cache simulator) */
 
-/* NOTE: This is a simulation of MEMORY and not the MEMORY STAGE of the pipeline,
- * the memory stage of the pipeline is in cpu/memory.cpp */
+/* NOTE: This is a simulation of MEMORY and not the DATA MEMORY STAGE of the
+ * pipeline; the data memory stage of the pipeline is in cpu/memory.cpp */
 
 /* CONSTRUCTOR */
 Memory::Memory(size_t size) {

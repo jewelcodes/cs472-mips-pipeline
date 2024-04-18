@@ -8,7 +8,7 @@
 #include <iostream>
 #include <iomanip>
 
-/* Instruction Decode Stage */
+/* Stage 2: Instruction Decode Stage */
 
 int Pipeline::decode() {
     // the goal is to read the instruction and set the approproiate control signals

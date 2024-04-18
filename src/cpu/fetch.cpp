@@ -6,7 +6,7 @@
 
 #include <pipeline.h>
 
-/* Instruction Fetch Stage */
+/* Stage 1: Instruction Fetch Stage */
 
 int Pipeline::fetch() {
     // that's literally all there is to this

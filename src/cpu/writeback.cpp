@@ -6,7 +6,7 @@
 
 #include <pipeline.h>
 
-/* Instruction Writeback Stage */
+/* Stage 5: Instruction Writeback Stage */
 
 int Pipeline::writeback() {
     // the writeback is the last stage of the pipeline so it does not write
