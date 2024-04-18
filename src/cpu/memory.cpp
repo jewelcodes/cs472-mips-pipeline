@@ -19,7 +19,7 @@ int Pipeline::memory() {
     // the memory stage may or may not even happen depending on the signals
     if(this->exMemRead.memRead) {
         this->memWbWrite.memValue = this->mainMemory->read(this->exMemRead.aluResult);
-    } else {
+    } else if(this->exMemRead.memWrite) {
         this->mainMemory->write(this->exMemRead.aluResult, this->exMemRead.memValue);
     }
 
