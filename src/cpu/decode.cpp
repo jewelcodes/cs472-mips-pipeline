@@ -23,6 +23,7 @@ int Pipeline::decode() {
             this->idExWrite.regWrite = true;
             this->idExWrite.regDst = true;
             this->idExWrite.memToReg = false;
+            this->idExWrite.memRead = false;
             this->idExWrite.memWrite = false;
             this->idExWrite.aluSrc = false;
             this->idExWrite.branch = false;
@@ -34,6 +35,7 @@ int Pipeline::decode() {
             this->idExWrite.regWrite = true;
             this->idExWrite.regDst = false;
             this->idExWrite.memToReg = true;
+            this->idExWrite.memRead = true;
             this->idExWrite.memWrite = false;
             this->idExWrite.aluSrc = true;
             this->idExWrite.branch = false;
@@ -42,6 +44,7 @@ int Pipeline::decode() {
             this->idExWrite.regWrite = false;
             this->idExWrite.regDst = false;     // doesn't matter here but clear anyway
             this->idExWrite.memToReg = false;   // doesn't matter here but clear anyway
+            this->idExWrite.memRead = false;
             this->idExWrite.memWrite = true;
             this->idExWrite.aluSrc = true;
             this->idExWrite.branch = false;
