@@ -35,14 +35,15 @@ Pipeline::Pipeline(Memory *m, uint32_t *binary, size_t size) {
 
 int Pipeline::emulate() {
     // each loop here corresponds to one CPU cycle
-    // TEMPORARILY ONLY DO ONE CYCLE UNTIL I GET IT WORKING
     for(this->index = 0; this->index < this->size; this->index++) {
-        this->fetch();          // go through all 5 stages of the pipeline
+        // go through all 5 stages of the pipeline
+        this->fetch();
         this->decode();
         this->execute();
         this->memory();
         this->writeback();
 
+        // and one cycle is done
         this->dumpState();
         this->copyWriteToRead();
     }
