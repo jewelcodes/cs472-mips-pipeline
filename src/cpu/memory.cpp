@@ -5,6 +5,7 @@
  */
 
 #include <pipeline.h>
+#include <memory.h>
 #include <iostream>
 #include <iomanip>
 
@@ -17,10 +18,16 @@ int Pipeline::memory() {
 
     // the memory stage may or may not even happen depending on the signals
     if(this->exMemRead.memRead) {
-        
+        this->memWbWrite.memValue = this->mainMemory->read(this->exMemRead.aluResult);
     } else {
-        
+        this->mainMemory->write(this->exMemRead.aluResult, this->exMemRead.memValue);
     }
+
+    // now simply pass the remaining signals along
+    this->memWbWrite.regWrite = this->exMemRead.regWrite;
+    this->memWbWrite.memToReg = this->exMemRead.memToReg;
+    this->memWbWrite.writeRegNumber = this->exMemRead.writeRegNumber;
+    this->memWbWrite.aluResult = this->exMemRead.aluResult;
 
     return 0;
 }
