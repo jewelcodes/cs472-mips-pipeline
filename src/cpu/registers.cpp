@@ -44,6 +44,11 @@ void IdExRegister::clear() {
     this->branch = false;
     this->aluOp = 0;
     this->function = 0;
+    this->readReg[0] = 0;
+    this->readReg[1] = 0;
+    this->signExtOffset = 0;
+    this->writeReg15_11 = 0;
+    this->writeReg20_16 = 0;
 }
 
 void ExMemRegister::clear() {
@@ -54,12 +59,19 @@ void ExMemRegister::clear() {
     this->memWrite = false;
     this->branch = false;
     this->zero = false;
+    this->branchTarget = 0;
+    this->aluResult = 0;
+    this->memValue = 0;
+    this->writeRegNumber = 0;
 }
 
 void MemWbRegister::clear() {
     this->newPc = 0;
     this->regWrite = false;
     this->memToReg = false;
+    this->memValue = 0;
+    this->aluResult = 0;
+    this->writeRegNumber = 0;
 }
 
 /* Dump functions */
