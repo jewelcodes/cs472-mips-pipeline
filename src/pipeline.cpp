@@ -78,7 +78,7 @@ void Pipeline::dumpState() {
 
     cout << "MEM/WB register (written by MEM): " << endl;
     this->memWbWrite.dump();
-    cout << endl << "MEM/WB register (read by MEM): " << endl;
+    cout << endl << "MEM/WB register (read by WB): " << endl;
     this->memWbRead.dump();
     cout << endl;
 }
