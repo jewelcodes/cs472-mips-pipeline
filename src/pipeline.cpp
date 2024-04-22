@@ -99,9 +99,9 @@ void Pipeline::dumpState() {
     outputPrefix();
     cout << "User registers: " << endl;
 
-    for(int i = 0; i < 8; i++) {    // divide the 32 regs into 4 lines of output
+    for(int i = 0; i < 8; i++) {    // divide the 32 regs into 8 lines of output
         outputPrefix();
-        for(int j = 0; j < 4; j++) {    // with 8 regs per line
+        for(int j = 0; j < 4; j++) {    // with 4 regs per line
             cout << "$" << dec << setw(0) << (i*4)+j << " = 0x";
             cout << hex << uppercase << setw(8) << setfill('0') << this->registers.r[(i*4)+j];
             cout << " ";
