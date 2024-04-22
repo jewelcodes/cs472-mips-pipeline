@@ -9,7 +9,7 @@
 #include <iostream>
 #include <iomanip>
 
-/* Instruction Data Memory Stage */
+/* Stage 4: Instruction Data Memory Stage */
 
 int Pipeline::memory() {
     // reset the pipeline register and then start
