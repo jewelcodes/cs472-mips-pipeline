@@ -23,7 +23,7 @@ int Pipeline::writeback() {
 
         if(!this->memWbRead.writeRegNumber) {
             cout << "(writeback) warning: attempt to write to register $0 value 0x";
-            cout < hex << uppercase << setw(8) << setfill('0') << value;
+            cout << hex << uppercase << setw(8) << setfill('0') << value;
             cout << "; ignoring" << endl;
         } else {
             this->registers.r[this->memWbRead.writeRegNumber] = value;
