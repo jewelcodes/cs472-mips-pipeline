@@ -17,6 +17,7 @@ Pipeline::Pipeline(Memory *m, uint32_t *binary, size_t size) {
     this->index = 0;        // dword index into the binry
 
     // initialize the register files - $0 is always 0 and $x = 0x100 + x
+    this->registers.r[0] = 0;
     for(int i = 1; i < 32; i++) {
         this->registers.r[i] = 0x100 + i;
     }
@@ -93,6 +94,22 @@ void Pipeline::dumpState() {
     outputPrefix();
     cout << "MEM/WB register (read by WB): " << endl;
     this->memWbRead.dump(this->index);
+    cout << endl;
+
+    outputPrefix();
+    cout << "User registers: " << endl;
+
+    for(int i = 0; i < 8; i++) {    // divide the 32 regs into 4 lines of output
+        outputPrefix();
+        for(int j = 0; j < 4; j++) {    // with 8 regs per line
+            cout << "$" << dec << setw(0) << (i*4)+j << "=0x";
+            cout << hex << setw(8) << setfill('0') << this->registers.r[(i*4)+j];
+            cout << " ";
+        }
+
+        cout << endl;
+    }
+
     cout << endl;
 }
 
