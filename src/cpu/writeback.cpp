@@ -5,6 +5,8 @@
  */
 
 #include <pipeline.h>
+#include <iostream>
+#include <iomanip>
 
 /* Stage 5: Instruction Writeback Stage */
 
