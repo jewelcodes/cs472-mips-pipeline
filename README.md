@@ -3,6 +3,8 @@ This is the third and final project for MET CS 472 (Computer Architecture) taken
 
 The actual pipeline main loop is in `src/pipeline.cpp` and the individual stages are in `src/cpu/`, where each stage is implemented in its own source file for clarity, cleanliness, and readability.
 
+**Update**: This scored 100% as well.
+
 ## Input
 The helper program in `helper/` writes the instructions given in the assignment to a file called `sample.bin` that can then be used as input to the emulator. The instructions given are:
 ```c
